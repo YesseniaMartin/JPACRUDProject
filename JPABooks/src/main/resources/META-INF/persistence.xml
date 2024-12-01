@@ -3,13 +3,13 @@
 	<persistence-unit name="Books">
 	
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<!--  	<class>com.skilldistillery.jpavideostore.entities.(name)</class> -->
+ 	<class>com.skilldistillery.jpabooks.entities.Books</class>
     
     
     <properties>
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/MyFavoriteBooks" />
-      <property name="jakarta.persistence.jdbc.user" value="favoriteBooks"/>
-      <property name="jakarta.persistence.jdbc.password" value="favoriteBooks" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/myfavoritebooks" />
+      <property name="jakarta.persistence.jdbc.user" value="favoritebooks"/>
+      <property name="jakarta.persistence.jdbc.password" value="favoritebooks" />
       <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 
       <property name="hibernate.show_sql" value="true" />
