@@ -12,9 +12,9 @@ public class BooksDAOImpl implements BooksDAO {
 	@Override
 	public int updateNullBooks() {
 		EntityManager em = emf.createEntityManager();
-		 String jpql = "UPDATE Books b " +
-                 "SET b.genre = concat(COALESCE(b.genre, 'Default'), ' Genre') " +
-                 "WHERE b.genre IS NULL OR b.genre = ''";
+		String jpql = "UPDATE Books b " +
+				"SET b.genre = 'Default Genre' ";
+		jpql += "WHERE b.genre IS NULL OR b.genre = ''";
 
 		em.getTransaction().begin();
 		int numberRowsAffected = em.createQuery(jpql).executeUpdate();
