@@ -55,4 +55,24 @@ public class BooksController {
 		mv.setViewName("addbook");
 		return mv;
 	}
+	
+	@GetMapping("deleteBookForm.do")
+    public String showDeleteBookForm(Model model) {
+		List<Books> books = dao.findAll();
+        model.addAttribute("book", books);
+        return "deletebook"; // This returns deletebook.jsp
+    }
+	
+	@PostMapping("deleteBooks.do")
+	public ModelAndView deleteBook(@RequestParam("bookId") int booksId) {
+	    ModelAndView mv = new ModelAndView();
+	    boolean wasDeleted = dao.deleteBooks(booksId);
+
+	    mv.addObject("book",dao.findAll());
+	    // Return to the main page (or the page that shows updated list)
+	    mv.setViewName("deletebook");
+	    return mv;
+	}
+
+	
 }

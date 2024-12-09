@@ -50,7 +50,7 @@ public class BooksDAOImpl implements BooksDAO {
 			em.remove(bookToDelete);
 			wasDeleted = true;
 		}
-		wasDeleted = !em.contains(bookToDelete);
+		wasDeleted = wasDeleted && !em.contains(bookToDelete);
 		return wasDeleted;
 	}
 
