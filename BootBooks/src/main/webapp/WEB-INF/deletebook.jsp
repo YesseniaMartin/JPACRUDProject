@@ -22,7 +22,7 @@
   <div class="row mb-4">
     <div class="col text-center">
       <h1 class="display-5">Delete Book</h1>
-      <p class="lead">Delete Book</p>
+      <p class="lead">You can delete a book from the list below</p>
     </div>
   </div>
   
@@ -45,6 +45,7 @@
               <td>${book.id}</td>
               <td>${book.bookTitle}</td>
               <td>${book.author}</td>
+              <td>${book.genre}</td>
               <td>${book.year}</td>
               <td>
                 <!-- Delete Book Form -->
@@ -70,6 +71,7 @@
   </div>
 </div>
 </div>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	

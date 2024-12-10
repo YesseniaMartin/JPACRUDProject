@@ -73,6 +73,34 @@ public class BooksController {
 	    mv.setViewName("deletebook");
 	    return mv;
 	}
+	
+	@GetMapping("editBookForm.do")
+	public String showEditBookForm(@RequestParam("bookId") int bookId, Model model) {
+	    Books book = dao.findBooksById(bookId);
+	    if (book == null) {
+	    	return "redirect:home.do";
+	    }
+	    model.addAttribute("book", book);
+	    return "updatebook";
+	}
+	
+	@PostMapping("updateBook.do")
+    public String updateBook(@RequestParam("bookId") int bookId,
+                             @RequestParam("bookTitle") String bookTitle,
+                             @RequestParam("author") String author,
+                             @RequestParam("genre") String genre,
+                             @RequestParam("year") Integer year,
+                             Model model) {
+        Books updatedInfo = new Books(bookTitle, author, genre, year);
+        Books updatedBook = dao.updateBook(updatedInfo, bookId);
+        if (updatedBook == null) {
+            model.addAttribute("error", "Unable to update book");
+            return "updatebook"; 
+        }
+        model.addAttribute("book", updatedBook);
+    
+        return "updatebook"; 
+    }
 
 	
 }

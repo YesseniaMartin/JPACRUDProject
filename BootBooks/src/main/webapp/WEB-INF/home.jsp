@@ -21,8 +21,8 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h1 class="text-center mb-4">Find a Book by ID</h1>
-            <form action="getBooks.do" method="GET" class="d-flex justify-content-center">
+            <h2 class="text-center mb-4">Find a Book by ID</h2>
+            <form action="getBooks.do" method="GET" class="d-flex justify-content-center" style="display:inline;">
                 <input type="text" name="bookId" class="form-control w-50 me-2" placeholder="Enter Book ID" required />
                 <button type="submit" class="btn btn-primary">Show Book</button>
             </form>
@@ -34,7 +34,7 @@
   <div class="row justify-content-center">
     <div class="col-md-6 text-center">
       <h2 class="text-center mb-4">Add Book To List</h2>
-      <button class="btn btn-primary" onclick="window.location.href='addBookForm.do'">Add Book</button>
+      <button class="btn btn-primary" onclick="window.location.href='addBookForm.do'">Add</button>
     </div>
   </div>
 </div>
@@ -43,7 +43,19 @@
   <div class="row justify-content-center">
     <div class="col-md-6 text-center">
       <h2 class="text-center mb-4">Delete Book</h2>
-      <button class="btn btn-primary" onclick="window.location.href='deleteBookForm.do'">Delete Book</button>
+      <button class="btn btn-primary" onclick="window.location.href='deleteBookForm.do'">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <h2 class="text-center mb-4">Update Book by ID</h2>
+      <form action="editBookForm.do" method="GET" class="d-flex justify-content-center" style="display:inline;">
+        <input type="text" name="bookId" class="form-control w-50 me-2" placeholder="Book ID" required />
+        <button type="submit" class="btn btn-primary">Edit Book</button>
+      </form>
     </div>
   </div>
 </div>

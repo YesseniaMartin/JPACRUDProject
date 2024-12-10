@@ -11,6 +11,6 @@ public interface BooksDAO {
 	boolean deleteBooks(int booksId);
 	List<Books> findAll();
 	Books findBooksById(int id);
-	Books updateBook(Books book, int id);
+	Books updateBook(Books book, int bookId);
 
 }

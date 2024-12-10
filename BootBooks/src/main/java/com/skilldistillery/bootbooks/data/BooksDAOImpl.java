@@ -55,35 +55,30 @@ public class BooksDAOImpl implements BooksDAO {
 	}
 
 	@Override
-	public Books updateBook(Books book, int id) {
-		Books managedBook = null;
-		// Retrieve existing entity
-		managedBook = em.find(Books.class, id);
-		if (managedBook != null) {
-			// Update entity fields
+	public Books updateBook(Books book, int bookId) {
+		// Retrieve existing entity or finding the existing book..
+		Books newBook = em.find(Books.class, bookId);
+		if (newBook != null) {
 			if (book.getBookTitle() != null && !book.getBookTitle().trim().isEmpty()) {
-				managedBook.setBookTitle(book.getBookTitle());
+				newBook.setBookTitle(book.getBookTitle());
 			}
 
 			if (book.getAuthor() != null && !book.getAuthor().trim().isEmpty()) {
-				managedBook.setAuthor(book.getAuthor());
+				newBook.setAuthor(book.getAuthor());
 			}
 
 			if (book.getGenre() != null && !book.getGenre().trim().isEmpty()) {
-				managedBook.setGenre(book.getGenre());
+				newBook.setGenre(book.getGenre());
 			}
 
 			if (book.getYear() != null) {
-				managedBook.setYear(book.getYear());
+				newBook.setYear(book.getYear());
 			}
-			// Use merge to persist updates
-			em.merge(managedBook);
+
+			em.merge(newBook);
+			return newBook;
 		}
-
-		// Return null or throw a custom exception if something goes wrong
-		managedBook = null;
-
-		return managedBook;
+		return null;
 	}
 
 }
