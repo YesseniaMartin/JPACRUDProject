@@ -39,7 +39,7 @@ public class BooksController {
 	}
 	@GetMapping("addBookForm.do")
 	public String showAddBookForm() {
-	    return "addbook"; // This returns the addbook.jsp page
+	    return "addbook"; 
 	}
 	
 	@PostMapping("addBooks.do")
