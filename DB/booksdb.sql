@@ -47,6 +47,10 @@ START TRANSACTION;
 USE `myfavoritebooks`;
 INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (1, 'Percy Jackson The Lightning Thief', 'Rick Riordan', 'Action & Adventure', 2005);
 INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (2, 'Harry Potter', 'J.K Rowling', 'Action & Adventure', 2015);
+INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (3, 'Amari and The Night Brothers', 'B.B Alston', 'Adventure', 2022);
+INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (4, 'Cinderella is Dead', 'Kalynn Bayron', 'Fiction', 2020);
+INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (5, 'The Road Trip', 'Beth O\'leary', 'Romance', 2021);
+INSERT INTO `books` (`book_id`, `book_title`, `author`, `genre`, `year-of`) VALUES (6, 'Harry Potter and The CHamber of Secrets', 'J.K Rowling', 'Fiction', 1999);
 
 COMMIT;
 
