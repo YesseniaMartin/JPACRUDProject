@@ -88,13 +88,13 @@ public class Books {
 
 	@Override
 	public String toString() {
-		return "Books [id=" + book_id + ", bookTitle=" + bookTitle + ", author=" + author + ", genre=" + genre + ", year="
-				+ year + "]";
+		return "Books [book_id=" + book_id + ", bookTitle=" + bookTitle + ", author=" + author + ", genre=" + genre
+				+ ", year=" + year + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, bookTitle, genre, book_id, year);
+		return Objects.hash(book_id);
 	}
 
 	@Override
@@ -106,8 +106,9 @@ public class Books {
 		if (getClass() != obj.getClass())
 			return false;
 		Books other = (Books) obj;
-		return Objects.equals(author, other.author) && Objects.equals(bookTitle, other.bookTitle)
-				&& Objects.equals(genre, other.genre) && book_id == other.book_id && Objects.equals(year, other.year);
+		return book_id == other.book_id;
 	}
+
+	
 
 }
