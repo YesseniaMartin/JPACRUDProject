@@ -21,10 +21,12 @@
 	<div class="container">
 		<div class="row mb-4">
 			<div class="col text-center">
+	<div class="alert alert-primary" role="alert">
 				<h1 class="display-5">Update Book</h1>
 				<p class="lead">Update Book Information Below</p>
 			</div>
 		</div>
+	</div>
 	</div>
 	<div class="container mt-5">
   <div class="row justify-content-center">
@@ -37,6 +39,7 @@
       <!-- Show form if 'book' is not empty -->
       <c:if test="${not empty book}">
         <div class="card p-4 shadow-sm">
+       <div class="p-3 bg-info bg-opacity-10 border border-info border-start-1 rounded-end">
           <form action="updateBook.do" method="POST">
             <input type="hidden" name="bookId" value="${book.id}" />
 
@@ -67,17 +70,19 @@
             <button type="submit" class="btn btn-primary w-100">Update Book</button>
           </form>
         </div>
+        </div>
 
         <!-- Display updated book info after update -->
         <h3 class="mt-5">Updated Book Information</h3>
         <div class="card shadow-sm mt-3">
+         <div class="p-3 bg-info bg-opacity-10 border border-info border-start-1 rounded-end">
           <div class="card-body">
             <h5 class="card-title">
               ${book.bookTitle} <span class="text-muted">(${book.year})</span>
             </h5>
             <p class="card-text"><strong>Author:</strong> ${book.author}</p>
             <p class="card-text"><strong>Genre:</strong> ${book.genre}</p>
-          </div>
+          </div></div>
         </div>
       </c:if>
 
@@ -89,7 +94,7 @@
       </c:if>
       
       <div class="text-center mt-4">
-        <a href="home.do" class="btn btn-secondary">Back to Home</a>
+        <a href="home.do" class="btn btn-outline-info">Back to Home</a>
       </div>
 
     </div>

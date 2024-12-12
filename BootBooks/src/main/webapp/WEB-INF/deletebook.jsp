@@ -19,15 +19,18 @@
 </nav>
 
 <div class="container">
+ <div class="alert alert-primary" role="alert">
   <div class="row mb-4">
     <div class="col text-center">
       <h1 class="display-5">Delete Book</h1>
       <p class="lead">You can delete a book from the list below</p>
     </div>
   </div>
+  </div>
   
  <div class="container mt-5">
     <h3>Book List</h3>
+  <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
     <c:if test="${not empty book}">
       <table class="table table-striped table-hover">
         <thead>
@@ -37,6 +40,7 @@
             <th>Author:</th>
             <th>Genre</th>
             <th>Year:</th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -66,8 +70,9 @@
       </div>
     </c:if>
 
+</div>
   <div class="text-center mt-4">
-    <a href="home.do" class="btn btn-secondary">Back to Home</a>
+    <a href="home.do" class="btn btn-outline-info">Back to Home</a>
   </div>
 </div>
 </div>

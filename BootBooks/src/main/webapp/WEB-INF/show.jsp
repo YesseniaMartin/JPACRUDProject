@@ -25,6 +25,7 @@
       <!-- Check if book is available -->
       <c:if test="${not empty book}">
         <div class="card shadow-sm">
+         <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
           <div class="card-body">
             <h4 class="card-title">${book.bookTitle}</h4>
             <h6 class="card-subtitle mb-2 text-muted">${book.author}</h6>
@@ -35,6 +36,7 @@
             <hr>
             <p class="card-text"><small class="text-muted">ID: ${book.id}</small></p>
           </div>
+        </div>
         </div>
       </c:if>
 

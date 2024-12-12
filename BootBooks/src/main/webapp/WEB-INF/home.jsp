@@ -50,7 +50,7 @@
 
       <!-- Delete Book -->
       <div class="card mb-4">
-      <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+      <div class="p-3 bg-info bg-opacity-10 border border-info border-start-1 rounded-end">
       
         <div class="card-header">Delete Book</div>
        <div class="card-body d-flex justify-content-end">
@@ -74,14 +74,15 @@
       </div>
     </div>
 
+
     <!-- Right column: Book list table -->
     <div class="col-md-8">
+    <div class="alert alert-primary" role="alert"> <h3>LIST OF BOOKS</h3></div>
       <c:if test="${not empty book}">
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover table-light-blue">
    		 <thead class="table-light-blue">
-          <thead>
             <tr>
-              <th>Book Id</th>
+              <th>Book ID</th>
               <th>Title</th>
               <th>Author</th>
               <th>Genre</th>
