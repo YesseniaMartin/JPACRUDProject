@@ -101,6 +101,7 @@
             </c:forEach>
           </tbody>
         </table>
+       
       </c:if>
       <c:if test="${empty book}">
         <div class="alert alert-warning mt-3">No books available</div>
